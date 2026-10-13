@@ -1,0 +1,310 @@
+---
+import Navbar from "./Navbar.vue";
+import Footer from "./Footer.vue";
+import Banner from "./Banner.vue";
+import SignUpFiexd from "./SignUpFiexd.vue";
+
+import "../styles/global.css";
+import "../styles/signUp.css";
+
+import SignUpTitle from "../assets/image/sign_up_title2.png";
+import TopBannerTitle from "../assets/image/top_banner_title.svg";
+import lineBgTop from "../assets/image/line_bg_top.png";
+
+import infoData from "../assets/json/info.v2.json";
+---
+
+<div id="container">
+  <main>
+    <SignUpFiexd client:load />
+    <Navbar client:load />
+    <section id="banner" class="relative w-full overflow-hidden z-2">
+      <Banner client:load />
+    </section>
+    <img src={lineBgTop.src} class="line_bg_top absolute top-[24rem] left-0 w-full pointer-events-none z-1" alt="line_bg_top" />
+    <section id="signUpSection" class="relative w-full z-10">
+      <div class="signUp_content_wrap">
+
+        <div id="signUp" class="container mx-auto">
+            <div class="box">
+            <TopBannerTitle class="w-[80%] mb-24 sm:mb-28 lg:mb-32 mx-auto lg:w-2xl" aria-label="sign up banner title" />
+            <div class="container">
+                <form id="data_form">
+                <div class="lists">
+                    <div class="sign_up_title_wrap">
+                        <img src={SignUpTitle.src} class="sign_up_title_img" alt="歷屆機構報名" />
+                    </div>
+                    <div class="list">
+                    <label for="q1">機構簡稱<span>*</span></label>
+                    <input type="text" id="q1" name="abbreviation" class="input_only">
+                    </div>
+                    <div class="list">
+                    <label for="q2">主要聯繫窗口姓名<span>*</span></label>
+                    <input type="text" id="q2" name="contactName" class="input_only">
+                    </div>
+                    <div class="list">
+                    <label for="q7">主要聯繫窗口職稱<span>*</span></label>
+                    <input type="text" id="q7" name="contactTitle" class="input_only">
+                    </div>
+                    <div class="list">
+                    <label for="q3">主要聯繫窗口Email<span>*</span></label>
+                    <input type="email" id="q3" name="contactEmail" class="input_only">
+                    </div>
+                    <div class="list">
+                    <label for="q4">主要聯繫窗口行動電話<span>*</span></label>
+                    <input type="text" id="q4" name="phone" class="input_only">
+                    </div>
+                    <div class="list">
+                    <label for="q5">主要聯繫窗口辦公室電話<span>*</span></label>
+                    <div class="right">
+                        <input type="text" id="q5" name="office_num1" class="contact_office_l">
+                        <input type="text" name="office_num2" class="contact_office_r">
+                    </div>
+                    </div>
+                    <div class="list">
+                    <label for="q6">分機<span>*</span></label>
+                    <div class="right list_jty_left">
+                        <input type="text" id="q6" name="branch" class="branch_l">
+                        <div class="branch_r">
+                        <label for="branch">
+                            <input type="checkbox" name="noBranch" id="branch"> 無分機
+                        </label>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="list">
+                    <label >屆次<span>*</span></label>
+                    <select name="period" id="" class="input_only">
+                        <option value="第一屆">第一屆</option>
+                        <option value="第二屆">第二屆</option>
+                        <option value="第三屆">第三屆</option>
+                        <option value="第四屆">第四屆</option>
+                        <option value="第五屆">第五屆</option>
+                        <option value="第六屆">第六屆</option>
+                        <option value="第七屆">第七屆</option>
+                        <option value="第八屆">第八屆</option>
+                        <option value="第九屆">第九屆</option>
+                        <option value="第十屆">第十屆</option>
+                        <option value="第十一屆">第十一屆</option>
+                    </select>
+                    </div>
+                    <div class="list">
+                    <label for="q7">總參加人數<span>*</span></label>
+                    <div class="right">
+                        <select name="allPeople" id="q7" class="w100">
+                            <option value="1">1位</option>
+                            <option value="2">2位</option>
+                            <option value="3">3位</option>
+                            <option value="4">4位</option>
+                            <option value="5">5位(含)以上請聯繫黃小姐02-2581-6196分機622</option>
+                        </select>
+                        <div class="remark">含上述主要聯繫窗口，因席次有限，若出席人數5位(含)以上，由專人與您聯繫確認可安排之席次。</div>
+                    </div>
+                    </div>
+                    <div class="activity_remark">
+                    活動聲明
+                    <br>1. 如報名有疑問，請直接撥活動專線聯繫。活動專線：請聯繫 <a href="tel:02-25816196#622">黃小姐 02-2581-6196 分機622</a>
+                    <br>2. 上述事項若有未盡事宜，主辦單位保留活動修改、變更之權利。
+                    <br><p style="color:#ff002b">3. 若重複獲獎單位，屆次以最近一年算，請參考傳善獎得獎名單 <a href="https://www.auroratrust.org.tw" style="color: dodgerblue;text-decoration: underline;">https://www.auroratrust.org.tw</a></p>
+                    </div>
+                    <input type="hidden" name="type" value="2">
+                    <div class="list">
+                        <button class="mx-auto" type="submit">送出</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <section id="footer" class="relative w-full overflow-hidden">
+      <Footer footerInfo={infoData.footer} client:visible />
+    </section>
+  </main>
+</div>
+
+<style>
+  #container {
+    background: url("../assets/image/institution_bg.png") center center repeat;
+    background-size: contain;
+  }
+</style>
+
+<script>
+    // 等待 DOM 完全加載
+    document.addEventListener('DOMContentLoaded', function() {
+    // 獲取表單元素
+    const form = document.querySelector<HTMLFormElement>('form');
+
+    // 驗證函數
+    function validateForm(event: SubmitEvent | Event) {
+        event.preventDefault();
+        let isValid = true;
+        let errorMessages: string[] = [];
+
+        // 驗證必填字段
+        const requiredFields = [
+        { name: 'abbreviation', label: '機構簡稱' },
+        { name: 'contactName', label: '主要聯繫窗口姓名' },
+        { name: 'contactTitle', label: '主要聯繫窗口職稱' },
+        { name: 'contactEmail', label: '主要聯繫窗口Email' },
+        { name: 'phone', label: '主要聯繫窗口行動電話' },
+        { name: 'office_num1', label: '主要聯繫窗口辦公室電話-區號' },
+        { name: 'office_num2', label: '主要聯繫窗口辦公室電話' },
+        { name: 'period', label: '屆次' },
+        { name: 'allPeople', label: '總參加人數' },
+        ];
+
+        requiredFields.forEach(field => {
+        const input = document.querySelector<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(`[name="${field.name}"]`);
+        if (input && !input.value.trim()) {
+            isValid = false;
+            errorMessages.push(`${field.label}為必填`);
+        }
+        });
+
+        // 驗證 Email 格式
+        const emailInput = document.querySelector<HTMLInputElement>('[name="contactEmail"]');
+        if (emailInput && emailInput.value && !isValidEmail(emailInput.value)) {
+        isValid = false;
+        errorMessages.push('請輸入有效的 Email 地址');
+        }
+
+        // 驗證電話號碼格式
+        const phoneInput = document.querySelector<HTMLInputElement>('[name="phone"]');
+        if (phoneInput && phoneInput.value && !isValidPhone(phoneInput.value)) {
+        isValid = false;
+        errorMessages.push('請輸入有效的行動電話號碼');
+        }
+
+        // 驗證辦公室電話格式
+        const officeNum1 = document.querySelector<HTMLInputElement>('[name="office_num1"]');
+        const officeNum2 = document.querySelector<HTMLInputElement>('[name="office_num2"]');
+        if (officeNum1 && officeNum2 && 
+            (officeNum1.value || officeNum2.value) && 
+            !isValidOfficePhone(officeNum1.value, officeNum2.value)) {
+        isValid = false;
+        errorMessages.push('請輸入有效的辦公室電話號碼');
+        }
+
+        // 驗證總參加人數為數字
+        const allPeopleInput = document.querySelector<HTMLInputElement | HTMLSelectElement>('[name="allPeople"]');
+        if (allPeopleInput && allPeopleInput.value && !isValidNumber(allPeopleInput.value)) {
+        isValid = false;
+        errorMessages.push('總參加人數必須為有效的數字');
+        }
+
+        // 驗證分機
+        const branchInput = document.querySelector<HTMLInputElement>('[name="branch"]');
+        const noBranchCheckbox = document.querySelector<HTMLInputElement>('[name="noBranch"]');
+        if (branchInput && noBranchCheckbox) {
+        if (!noBranchCheckbox.checked && !branchInput.value.trim()) {
+            isValid = false;
+            errorMessages.push('請輸入分機或勾選無分機');
+        }
+        }
+
+        if (!isValid) {
+        showError(errorMessages);
+        } else {
+        if (confirm('確定要提交表單嗎？')) {
+            console.log('表單驗證通過，正在提交...');
+            //form.submit();
+            sign_up();
+        }
+        }
+    }
+
+    // 顯示錯誤信息
+    function showError(messages: string[]) {
+        alert(messages.join('\n'));
+    }
+
+    // 驗證 Email 格式
+    function isValidEmail(email: string) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    // 驗證電話號碼格式（假設為10位數字）
+    function isValidPhone(phone: string) {
+        const re = /^[0-9]{10}$/;
+        return re.test(phone);
+    }
+
+    // 驗證辦公室電話格式
+    function isValidOfficePhone(num1: string, num2: string) {
+        const re = /^[0-9]+$/;
+        return re.test(num1) && re.test(num2) && (num1 + num2).length >= 9;
+    }
+
+    // 驗證是否為有效數字
+    function isValidNumber(value: string | number) {
+        const strVal = String(value);
+        return !isNaN(Number(strVal)) && parseInt(strVal, 10).toString() === strVal;
+    }
+
+    // 添加表單提交事件監聽器
+    if (form) {
+        form.addEventListener('submit', validateForm);
+    } else {
+        console.error('未找到表單元素');
+    }
+    });
+
+    async function sign_up() {
+        try {
+            const form = document.getElementById('data_form') as HTMLFormElement | null;
+            if (!form) return;
+            const data = new FormData(form);
+            // const url = 'https://' + window.location.hostname + '/backend/auroratrustaward2025/sign_up';
+            const url = 'https://events.businesstoday.com.tw/backend/auroratrustaward2026/sign_up';
+
+            // 避免重複送出
+            const submitBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+            if (submitBtn) submitBtn.disabled = true;
+
+            const res = await fetch(url, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' },
+            });
+
+            let response: any;
+            const contentType = res.headers.get('content-type') || '';
+            if (contentType.includes('application/json')) {
+                response = await res.json();
+            } else {
+                const text = await res.text();
+                try {
+                    response = JSON.parse(text);
+                } catch (e) {
+                    response = null;
+                }
+            }
+
+            if (!res.ok) {
+                throw new Error('Network error: ' + res.status + ' ' + res.statusText);
+            }
+
+            if (response && response['bIsSuccess'] == 0) {
+                alert(response['sError'] || '提交失敗，請稍後再試');
+                return;
+            }
+
+            alert('感謝您的報名，已收到您的報名資訊。本活動為審核制，後續將以簡訊、E-mail通知您是否報名成功，並發送報到簡訊給您，如未收到代表未報名成功，謝謝。');
+            form.reset();
+            location.href = "./index.html";
+        } catch (err) {
+            alert("系統忙碌中，請稍後再試！");
+            console.error(err);
+        } finally {
+            const form = document.getElementById('data_form') as HTMLFormElement | null;
+            const submitBtn = form ? form.querySelector<HTMLButtonElement>('button[type="submit"]') : null;
+            if (submitBtn) submitBtn.disabled = false;
+        }
+    }
+</script>

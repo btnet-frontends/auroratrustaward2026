@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_5" data-name="圖層 5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 188.33 55.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_26);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: NotoSansHK-Bold, 'Noto Sans HK';
+        font-size: 15.56px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+        letter-spacing: .08em;
+      }
+    </style>
+    <linearGradient id="_未命名漸層_26" data-name="未命名漸層 26" x1="7.29" y1="30.2" x2="184.99" y2="30.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e9f4f8"/>
+      <stop offset=".07" stop-color="#dbe4f5"/>
+      <stop offset=".26" stop-color="#bcbfee"/>
+      <stop offset=".45" stop-color="#a4a2e8"/>
+      <stop offset=".64" stop-color="#928de5"/>
+      <stop offset=".82" stop-color="#8881e2"/>
+      <stop offset="1" stop-color="#857de2"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" x="7.29" y="6.2" width="177.7" height="48.01" rx="21.8" ry="21.8"/>
+  <text class="cls-3" transform="translate(46.53 36.73)"><tspan x="0" y="0">歷屆機構報名</tspan></text>
+  <rect class="cls-2" x="2.71" y="1.62" width="177.7" height="48.01" rx="21.8" ry="21.8"/>
+</svg>

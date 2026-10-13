@@ -1,0 +1,155 @@
+---
+
+import Footer from './Footer.vue';
+import Kv from './Kv.vue';
+import Intro from './Intro.vue';
+import Activity from './Activity.vue';
+import Agenda from './Agenda.vue';
+import Institution from './Institution.vue';
+import Notice from './Notice.vue';
+import SignUpFiexd from './SignUpFiexd.vue';
+// import Event from './event.vue';
+// import Logo from './logo.vue';
+// import Gototop from './Gototop.vue';
+
+import infoData from '../assets/json/info.v2.json'
+// import speakers from '../assets/json/speaker.json'
+
+import '../styles/global.css';
+
+import lineBgTop from '../assets/image/line_bg_top.png';
+import lineBgBt from '../assets/image/line_bg_bt.png';
+import introEnImg from '../assets/image/institution_en.png';
+import activityEnImg from '../assets/image/activity_en.png';
+import agendaEnImg from '../assets/image/agenda_en.png';
+import awardedInstEnImg from '../assets/image/AwardedInstitution_en.png';
+import noticeEnImg from '../assets/image/notice_en.png';
+
+---
+
+<div id="container">
+	<main>
+		<section id="kv" class="relative w-full overflow-hidden">
+			<Kv client:load />
+		</section>
+		<section id="intro" class="relative w-full overflow-x-clip">
+			<img src={introEnImg.src} class="section_en_title absolute top-[5px] left-[5px] z-20 pointer-events-none" alt="Introduction" />
+			<Intro infoData={infoData.content[0]} client:visible />
+		</section>
+		<section id="activity" class="relative w-full overflow-x-clip">
+			<img src={activityEnImg.src} class="section_en_title absolute top-[5px] left-[5px] z-20 pointer-events-none" alt="Activity" />
+			<Activity infoData={infoData.content[1]} client:visible />
+		</section>
+		<section id="agenda" class="relative w-full overflow-x-clip">
+			<img src={agendaEnImg.src} class="section_en_title absolute top-[5px] left-[5px] z-20 pointer-events-none" alt="Agenda" />
+			<img src={lineBgTop.src} class="line_bg_top absolute top-0 left-0 w-full z-1 pointer-events-none" alt="line_bg_top">
+			<Agenda infoData={infoData.content[2]} client:visible />
+		</section>
+		<section id="institution" class="relative w-full overflow-x-clip">
+			<img src={awardedInstEnImg.src} class="section_en_title absolute top-[5px] left-[5px] z-20 pointer-events-none" alt="Awarded Institution" />
+			<Institution infoData={infoData.content[3]} client:visible />
+			<img src={lineBgBt.src} class="line_bg_bt absolute bottom-0 left-0 w-full z-1 pointer-events-none" alt="line_bg_bt">
+		</section>
+		<section id="notice" class="relative w-full overflow-x-clip">
+			<img src={noticeEnImg.src} class="section_en_title absolute top-[5px] left-[5px] z-20 pointer-events-none" alt="Notice" />
+			<Notice infoData={infoData.content[4]} client:visible />
+		</section>
+		<section id="footer" class="relative w-full overflow-hidden">
+			<Footer footerInfo={infoData.footer} client:visible />
+		</section>
+		<SignUpFiexd client:load />
+	</main>
+</div>
+
+<style>
+	 #container{
+        opacity: 0;
+        -webkit-animation: fadeIn 1s ease-in-out forwards;
+        animation: fadeIn 1s ease-in-out forwards;
+        -webkit-animation-delay: 0.01s; /* 小延遲讓 DOM 先渲染 */
+        animation-delay: 0.01s;
+        will-change: opacity;
+    }
+
+    @-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+	#kv{
+		background: url('../assets/image/kv_bg.png') center center no-repeat;
+		background-size: cover;
+	}
+
+	#intro,#activity,#notice{
+		background: url('../assets/image/agenda_bg.png') fixed center center no-repeat;
+		background-size: cover;
+	}
+
+	#agenda,#institution{
+		background: url('../assets/image/institution_bg.png') fixed center center no-repeat;
+		background-size: cover;
+	}
+
+	.line_bg_top{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		pointer-events: none;
+	}
+
+	.line_bg_bt{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		pointer-events: none;
+	}
+
+	/*
+	 * 5 張標題圖片（Introduction / Activity / Agenda / Awarded Institution / Notice）
+	 * 全部共用同一組規則，用 height 統一等比縮放，讓文字視覺大小一致。
+	 *
+	 * 原本問題：Awarded Institution 因文字較長、寬高比約 9.81（1550/158），
+	 * 若跟其他圖一樣用 height:150px 會超出版面寬度，於是被迫另外用
+	 * .section_en_title_awarded 把 height 硬壓到 42px，導致它「額外被縮小」，
+	 * 跟其他標題的視覺字級不一致。
+	 *
+	 * 修正方式：不再對單一圖片用不同 height，改用 clamp() 讓 height 隨視窗寬度
+	 * 等比縮放（同一組數值套用在所有標題圖），並確保在此 height 上限下，
+	 * 最寬的 Awarded Institution（比例 9.81）也不會超出 max-width，
+	 * 這樣所有標題的文字高度（字級）永遠一致，差別只在於文字較多的圖本來就會比較寬。
+	 *
+	 * 如果你實際量測後發現版面容器比預期窄／寬，請調整 clamp() 的
+	 * 第二個參數（vw 比例）或第三個參數（最大 px 上限），
+	 * 原則：height(px) × 9.81 需 ≤ 該斷點容器可用寬度。
+	 */
+	.section_en_title {
+		height: clamp(28px, 8vw, 110px);
+		width: auto;
+		max-width: 95vw;
+		object-fit: contain;
+	}
+
+	@media screen and (max-width: 1024px) {
+		#intro,#activity,#notice{
+			background: url('../assets/image/agenda_bg.png') fixed center center no-repeat;
+			background-size: cover;
+		}
+
+		#agenda,#institution{
+			background: url('../assets/image/institution_bg.png') fixed center center no-repeat;
+			background-size: cover;
+		}
+
+		.section_en_title {
+			height: clamp(24px, 7vw, 70px);
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.section_en_title {
+			height: clamp(20px, 8vw, 34px);
+		}
+	}
+</style>

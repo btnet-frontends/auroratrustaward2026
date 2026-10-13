@@ -1,0 +1,297 @@
+#signUp .slogan {
+  width: 100%;
+  max-width: 547px;
+  display: block;
+  margin-bottom: 75px;
+}
+
+#signUp .signUp_logo {
+  height: 116px;
+  display: block;
+  margin-bottom: 65px;
+}
+
+#signUp form {
+  width: 100%;
+  max-width: 850px;
+}
+
+#signUp form .lists {
+  position: relative;
+  width: 100%;
+  padding: 68px 64px 40px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0px 0px 12px rgba(152, 152, 152, 0.3);
+  border-radius: 30px;
+  margin-bottom: 56px;
+}
+
+#signUp .sign_up_title_wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.sign_up_title_img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  width: 70%;
+  max-width: 320px;
+}
+
+form .list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form .list label {
+  width: 295px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #424242;
+  cursor: pointer;
+}
+
+form .list label span {
+  font-size: 18px;
+  line-height: 26px;
+  color: #E03127;
+}
+
+form .list .input_only {
+  width: calc(100% - 295px);
+}
+
+form input,
+form textarea {
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 0 10px;
+  color: #424242;
+  height: 30px;
+  border: unset;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+form .list .right {
+  width: calc(100% - 295px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .list .right .contact_office_l {
+  width: 62px;
+}
+
+form .list .right .contact_office_r {
+  width: 341px;
+}
+
+form .list .right .branch_l {
+  width: 175px;
+}
+
+form .list .right .branch_r {
+  width: 230px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #424242;
+}
+
+.w100 {
+  width: 100%;
+}
+
+form .list .right .remark {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ff002b;
+  padding-top: 9px;
+}
+
+form .list .right .media_l {
+  width: 215px;
+}
+
+form .list .right .media_r {
+  width: 188px;
+}
+
+form .list .right .area {
+  height: 122px;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+}
+
+form .activity_remark {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+form .activity_remark a {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+form button {
+  width: 200px;
+  height: 48px;
+  background: linear-gradient(to right, #fe508b, #94d9f8);
+  border-radius: 24px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: unset;
+  cursor: pointer;
+  letter-spacing: 3px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(254, 80, 139, 0.45);
+}
+
+@media (max-width:860px) {
+  form .list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form .list .input_only {
+    width: 100%;
+  }
+
+  form .list .right {
+    width: 100%;
+  }
+
+  form .list .right .contact_office_r {
+    width: calc(100% - 62px - 20px);
+  }
+
+  form .list .list_jty_left {
+    justify-content: start;
+    gap: 20px;
+  }
+
+  form .list .right .media_r {
+    width: calc(100% - 215px - 20px);
+  }
+}
+
+@media (max-width:535px) {
+  #signUp .signUp_logo {
+    height: 100px;
+  }
+
+  #signUp form .lists {
+    padding: 50px 20px 20px;
+  }
+
+  form .list .right .branch_r {
+    width: 73px;
+  }
+
+  form .list .right .branch_l {
+    width: calc(100% - 73px - 20px);
+  }
+
+  form .list .right .media_l {
+    width: calc(40% - 10px);
+  }
+
+  form .list .right .media_r {
+    width: calc(60% - 10px);
+  }
+}
+
+@media (max-width:480px) {
+  form .list .right .remark {
+    font-size: 13px;
+  }
+
+  form .activity_remark {
+    font-size: 13px;
+  }
+}
+
+
+
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #fff;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #a8a8a8;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 20px;
+  background-color: #fff !important;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  height: 30px;
+  border: unset;
+  padding: 0 10px;
+  color: #424242;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+}
+
+option {
+  background-color: #fff;
+}
+
+select::-ms-expand {
+  display: none;
+}

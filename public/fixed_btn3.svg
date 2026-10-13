@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_字" data-name=" 字" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 79 79">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: NotoSansHK-Bold, 'Noto Sans HK';
+        font-size: 9.48px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+        letter-spacing: .07em;
+      }
+
+      .cls-2 {
+        mask: url(#mask);
+      }
+
+      .cls-3 {
+        fill: url(#_未命名漸層_29-2);
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-5 {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-8 {
+        fill: url(#_未命名漸層_3);
+      }
+
+      .cls-9 {
+        fill: url(#_未命名漸層_29);
+      }
+
+      .cls-10 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-11 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-12 {
+        fill: url(#_未命名漸層_4);
+      }
+
+      .cls-13 {
+        filter: url(#luminosity-noclip);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-4" x="393.02" y="391.46" width="1440" height="299"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-4" x="393.02" y="-59.54" width="1440" height="813.82"/>
+    </clipPath>
+    <radialGradient id="_未命名漸層_3" data-name="未命名漸層 3" cx="-1214.69" cy="519.54" fx="-1214.69" fy="519.54" r="1247.07" gradientTransform="translate(1632.5601 1481.99) rotate(90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffded" stop-opacity=".1"/>
+      <stop offset=".48" stop-color="#ffdb55" stop-opacity=".2"/>
+      <stop offset=".72" stop-color="#fff8ae" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clippath-2">
+      <rect class="cls-4" x="379.02" y="-595.54" width="1440" height="299"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-4" x="379.02" y="-1046.54" width="1440" height="813.82"/>
+    </clipPath>
+    <radialGradient id="_未命名漸層_4" data-name="未命名漸層 4" cx="-2291.69" cy="443.54" fx="-2291.69" fy="443.54" r="1247.07" gradientTransform="translate(0 80) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffded" stop-opacity=".1"/>
+      <stop offset=".48" stop-color="#ffdb55" stop-opacity=".2"/>
+      <stop offset=".72" stop-color="#fff8ae" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="luminosity-noclip" x="-2" y="-2" width="83" height="83" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask" x="-2" y="-2" width="83" height="83" maskUnits="userSpaceOnUse">
+      <g class="cls-13">
+        <image width="83" height="83" transform="translate(-2 -2)" xlink:href="data:image/png;base64,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"/>
+      </g>
+    </mask>
+    <linearGradient id="_未命名漸層_29" data-name="未命名漸層 29" x1="-5183.53" y1="-138.84" x2="-5104.84" y2="-138.84" gradientTransform="translate(3775.1673 -3499.8109) rotate(-45)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff9fd"/>
+      <stop offset=".02" stop-color="#faf6fd"/>
+      <stop offset=".18" stop-color="#ccdcfd"/>
+      <stop offset=".35" stop-color="#a7c8fe"/>
+      <stop offset=".52" stop-color="#8ab7fe"/>
+      <stop offset=".68" stop-color="#75acfe"/>
+      <stop offset=".84" stop-color="#69a5fe"/>
+      <stop offset="1" stop-color="#65a3ff"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_29-2" data-name="未命名漸層 29" x1="-5180.02" y1="-138.84" x2="-5108.36" y2="-138.84" xlink:href="#_未命名漸層_29"/>
+  </defs>
+  <g class="cls-11">
+    <g class="cls-6">
+      <circle class="cls-8" cx="1113.02" cy="267.3" r="1247.07"/>
+    </g>
+  </g>
+  <g class="cls-10">
+    <g class="cls-7">
+      <circle class="cls-12" cx="1099.02" cy="-719.7" r="1247.07"/>
+    </g>
+  </g>
+  <g>
+    <g class="cls-2">
+      <path class="cls-9" d="M54.56,3.14c-5.02,2.95-11.53,1.67-15.06-2.99-3.53,4.65-10.02,5.94-15.06,2.99-1.47,5.65-6.98,9.33-12.76,8.54.79,5.78-2.89,11.29-8.54,12.76,2.95,5.04,1.66,11.53-2.99,15.06,4.65,3.53,5.94,10.02,2.99,15.06,5.65,1.48,9.33,6.98,8.54,12.76,5.79-.79,11.29,2.89,12.76,8.54,5.02-2.95,11.52-1.67,15.06,2.99,1.71-2.26,4.16-3.79,6.96-4.35,2.8-.56,5.65-.07,8.1,1.36.53-2.04,1.59-3.83,3-5.24,2.49-2.49,6.07-3.81,9.76-3.3-.79-5.8,2.89-11.29,8.54-12.76-2.95-5.04-1.66-11.53,2.99-15.06-2.26-1.71-3.79-4.16-4.35-6.96-.56-2.8-.07-5.65,1.36-8.1-5.65-1.48-9.33-6.98-8.54-12.76-5.77.8-11.29-2.88-12.76-8.54Z"/>
+    </g>
+    <path class="cls-3" d="M53.21,6.39c-4.57,2.69-10.5,1.52-13.71-2.72-3.22,4.24-9.13,5.41-13.71,2.72-1.34,5.14-6.35,8.5-11.62,7.77.72,5.27-2.63,10.28-7.77,11.62,2.69,4.59,1.52,10.5-2.72,13.71,4.23,3.21,5.41,9.13,2.72,13.71,5.15,1.35,8.5,6.36,7.77,11.62,5.27-.72,10.28,2.63,11.62,7.77,4.57-2.69,10.5-1.52,13.71,2.72,1.56-2.06,3.79-3.45,6.34-3.96,2.55-.51,5.15-.07,7.37,1.24.49-1.86,1.45-3.49,2.74-4.77,2.27-2.27,5.53-3.47,8.89-3-.72-5.28,2.64-10.28,7.77-11.62-2.69-4.59-1.51-10.5,2.72-13.71-2.06-1.56-3.45-3.79-3.96-6.34-.51-2.55-.07-5.15,1.24-7.37-5.15-1.35-8.5-6.36-7.77-11.62-5.26.73-10.28-2.63-11.62-7.77Z"/>
+    <path class="cls-5" d="M51.89,9.58c-4.13,2.43-9.49,1.37-12.39-2.46-2.91,3.83-8.25,4.89-12.39,2.46-1.21,4.65-5.74,7.68-10.5,7.03.65,4.76-2.38,9.29-7.03,10.5,2.43,4.15,1.37,9.49-2.46,12.39,3.83,2.91,4.89,8.25,2.46,12.39,4.65,1.22,7.68,5.75,7.03,10.5,4.76-.65,9.29,2.38,10.5,7.03,4.13-2.43,9.49-1.37,12.39,2.46,1.41-1.86,3.42-3.12,5.73-3.58,2.31-.46,4.65-.06,6.66,1.12.44-1.68,1.31-3.15,2.47-4.31,2.05-2.05,4.99-3.13,8.03-2.72-.65-4.77,2.38-9.29,7.02-10.5-2.43-4.15-1.37-9.49,2.46-12.39-1.86-1.41-3.12-3.42-3.58-5.73-.46-2.31-.06-4.65,1.12-6.66-4.65-1.22-7.68-5.75-7.03-10.5-4.75.66-9.29-2.37-10.5-7.03Z"/>
+    <text class="cls-1" transform="translate(20.7 37.51)"><tspan x="0" y="0">今周刊&amp;</tspan><tspan x="-1.23" y="12.33">其他報名</tspan></text>
+  </g>
+</svg>

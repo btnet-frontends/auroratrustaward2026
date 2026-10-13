@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+body {
+  overflow-x: hidden;
+}
+
+/*signUp page使用*/
+.signUp_content_wrap{
+  position: relative;
+  display: block;
+  max-width: 1366px;
+  margin: -27rem auto 0 auto;
+  padding: 85px 0;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.box {
+  width: 100%;
+  max-width: 1440px;
+  padding: 64px 0px;
+}
+
+.box .container {
+  padding: unset;
+}
+
+.title_box {
+  margin-bottom: 30px;
+}
+
+
+.title {
+  font-size: 48px;
+  text-align: center;
+  line-height: 1;
+}
+
+.title_en {
+  font-size: 16px;
+  text-align: center;
+}
+/*---------*/
+
+.content_wrap{
+  position: relative;
+  display: block;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 85px 0px 0px 0px;
+}
+
+.title{
+  font-weight: 700;
+  letter-spacing: 15px;
+}
